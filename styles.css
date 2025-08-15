@@ -1,13 +1,112 @@
+/* 
+Top creating a grid
+    https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-creating-a-grid#lines-and-tracks-in-grids-oh-my
 .container {
   display: grid;
   grid-template-columns: 50px 50px;
   grid-template-rows: 50px 50px;
   grid-auto-rows: 50px;
-  /* column-gap: 10px;
-  row-gap: 100px; */
+  // column-gap: 10px;
+  // row-gap: 100px;
   gap: 100px 10px;
 }
 
 .container > div {
   border: 1px solid blue;
+} 
+*/
+
+/* 
+Top Positioning Grid Elements
+    https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-positioning-grid-elements 
+*/
+
+/* 
+"Reviewing tracks"
+.container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+}
+
+.item {
+  background-color: orange;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.first-row {
+    background-color: pink;
+}
+
+.last-column {
+    background-color: lightblue;
+} 
+*/
+
+/* .container {
+  display: inline-grid;
+  grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+  background-color: lightblue;
+  grid-template-areas:
+    "living-room living-room living-room living-room living-room"
+    "living-room living-room living-room living-room living-room"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "closet closet . . ."
+}
+
+.room {
+  border: 1px solid;
+  font-size: 50%;
+  text-align: center;
+}
+
+#living-room {
+   grid-area:  living-room;
+}
+
+#kitchen {
+  grid-area: kitchen;
+}
+
+#bedroom {
+  grid-area: bedroom;
+}
+
+#bathroom {
+  grid-area: bathroom;
+}
+
+#closet {
+  grid-area: closet;
+} */
+
+.grid-container {
+  resize: both;
+  overflow: auto;
+  display: grid;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid grey;
+  background-color: skyblue;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.grid-item {
+  background-color: #444;
+  text-align: center;
+  color: #ddd;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  padding: 12px;
+}
+
+p {
+  margin: 12px auto 24px;
+}
+
+img {
+  height: 60px;
 }
